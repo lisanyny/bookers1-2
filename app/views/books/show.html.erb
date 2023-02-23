@@ -1,2 +1,19 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="book-table">
+      <table>
+        <tr>
+          <th>Title:</th>
+          <td><%= @book.title %></td>
+        </tr>
+        <tr>
+          <th>Body:</th>
+          <td><%= @book.body %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <%= link_to "Edit", edit_book_path(@book.id) %>
+  |
+  <%= link_to "Back", books_path %>
+</div>
